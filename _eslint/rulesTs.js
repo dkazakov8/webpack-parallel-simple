@@ -18,7 +18,6 @@ const rulesConfig = {
   '@typescript-eslint/no-inferrable-types': 'error',
   '@typescript-eslint/no-floating-promises': 'error',
   '@typescript-eslint/no-array-constructor': 'error',
-  '@typescript-eslint/no-non-null-assertion': 'error',
   '@typescript-eslint/prefer-namespace-keyword': 'error',
   '@typescript-eslint/require-array-sort-compare': 'error',
   '@typescript-eslint/consistent-type-assertions': 'error',

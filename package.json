@@ -1,20 +1,34 @@
 {
   "name": "webpack-parallel-simple",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Simple tool to parallelize build",
   "author": "Dmitry Kazakov",
   "license": "MIT",
+  "main": "dist/index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dkazakov8/webpack-parallel-simple.git"
+  },
+  "keywords": [
+    "webpack",
+    "parallel"
+  ],
+  "bugs": {
+    "url": "https://github.com/dkazakov8/webpack-parallel-simple/issues"
+  },
+  "homepage": "https://github.com/dkazakov8/webpack-parallel-simple#readme",
   "scripts": {
     "prepare": "husky install",
-    "build": "babel-node -r dotenv/config --extensions .js,.jsx,.ts,.tsx ./_webpack/builder.ts",
-    "analyze:js": "eslint --ignore-path .formatignore --ext \\\".js,.ts,.tsx\\\" -c ./eslint.config.js src",
+    "build": "tsc --project tsconfig.json",
+    "analyze:js": "eslint --ignore-path .formatignore --ext \".js,.ts,.tsx\" -c ./eslint.config.js src",
     "format:js": "eslint --ignore-path .formatignore --ext \".js,.ts,.tsx\" -c ./eslint.config.js --fix",
-    "check-types": "tsc --project tsconfig.json"
+    "check-types": "tsc --project tsconfig.json --noEmit"
   },
   "dependencies": {
     "chalk": "4.1.1"
   },
   "devDependencies": {
+    "@types/node": "15.0.2",
     "husky": "6.0.0",
     "@typescript-eslint/eslint-plugin": "4.22.0",
     "@typescript-eslint/parser": "4.22.0",
@@ -24,6 +38,9 @@
     "eslint-plugin-prettier": "3.4.0",
     "eslint-import-resolver-typescript": "2.4.0",
     "prettier": "2.2.1",
+    "webpack": "5.36.2",
+    "typescript": "4.2.4",
+    "lint-staged": "10.5.4",
     "prettier-eslint": "12.0.0"
   },
   "peerDependencies": {

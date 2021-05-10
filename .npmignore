@@ -1,0 +1,12 @@
+*.log
+.idea
+node_modules
+.husky
+_eslint
+src
+tsconfig.json
+yarn.lock
+lint-staged.config.js
+eslint.config.js
+.formatignore
+.gitignore
