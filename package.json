@@ -1,0 +1,32 @@
+{
+  "name": "webpack-parallel-simple",
+  "version": "0.0.1",
+  "description": "Simple tool to parallelize build",
+  "author": "Dmitry Kazakov",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "husky install",
+    "build": "babel-node -r dotenv/config --extensions .js,.jsx,.ts,.tsx ./_webpack/builder.ts",
+    "analyze:js": "eslint --ignore-path .formatignore --ext \\\".js,.ts,.tsx\\\" -c ./eslint.config.js src",
+    "format:js": "eslint --ignore-path .formatignore --ext \".js,.ts,.tsx\" -c ./eslint.config.js --fix",
+    "check-types": "tsc --project tsconfig.json"
+  },
+  "dependencies": {
+    "chalk": "4.1.1"
+  },
+  "devDependencies": {
+    "husky": "6.0.0",
+    "@typescript-eslint/eslint-plugin": "4.22.0",
+    "@typescript-eslint/parser": "4.22.0",
+    "eslint": "7.25.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-prettier": "3.4.0",
+    "eslint-import-resolver-typescript": "2.4.0",
+    "prettier": "2.2.1",
+    "prettier-eslint": "12.0.0"
+  },
+  "peerDependencies": {
+    "webpack": "*"
+  }
+}
