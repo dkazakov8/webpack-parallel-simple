@@ -1,6 +1,6 @@
 ## Simple lib for parallel Webpack builds
 
-*WARNING: the lib is not tested currently and may not be stable*
+*DEPRECATED: use https://github.com/dkazakov8/dk-webpack-parallel-simple instead*
 
 ### Motivation
 
